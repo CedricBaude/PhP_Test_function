@@ -5,7 +5,7 @@
 function checkPassword($password) {
 
     echo '<h1 class="text-center">Cedric</h1>';
-    echo '<div class"row">
+    echo '<div class"container">
             <p>Mot de passe: ' .$password;
     echo ' </p>
             <p class=text-end >Force du mot de passe </p>';
@@ -19,20 +19,19 @@ function checkPassword($password) {
                 echo '<div class="progress">
                         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>';
-                if ($uppercase){
-                    echo '<div class="progress">
-                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>';
-
-                }
-            }else{
+                
+            }
+            
+            else{
                 echo '<div class="progress">
                         <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>';
                 echo '<button type="button" class="btn btn-success">OK</button>';
             }
+            
 
-            echo' <div class=" row col-3 align-self-center">
+            echo' <div class="row" >
+                <div class="col-3"  >
                 <ul class="list-group ">
                 <li class="list-group-item active" aria-current="true">An active item</li>
                 <li class="list-group-item">A second item</li>
@@ -40,6 +39,7 @@ function checkPassword($password) {
                 <li class="list-group-item">A fourth item</li>
                 <li class="list-group-item">And a fifth one</li>
                 </ul>
+                </div>
             </div>
 
 
