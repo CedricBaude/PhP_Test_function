@@ -26,6 +26,8 @@
 
                 // I use my personal function with my namespace
                 // ...
+                include_once ('./functions/cedric.php');
+                checkPassword($password);
 
             }
             else {
