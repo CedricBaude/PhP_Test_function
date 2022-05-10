@@ -18,6 +18,12 @@
 
         <div class="container py-3">
 
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Soumettre le mot de passe
+            </button>
+
+            
+
             <?php
 
             if (isset($_GET['password'])) {
