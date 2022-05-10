@@ -31,13 +31,43 @@ function checkPassword($password) {
             
 
             echo' <div class="row" >
-                <div class="col-3"  >
-                <ul class="list-group ">
-                <li class="list-group-item active" aria-current="true">An active item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
+                <div class="col-4"  >
+                <ul class="list-group ">';
+            echo '<li class="list-group-item active" aria-current="true">Le mot de passe doit contenir au moins:</li>';
+            if (!$number) {
+                echo '<li class="list-group-item">1 chiffre</li>';
+            }
+            else {
+                echo ' ';
+            }
+            if (!$lowercase) {
+                echo '<li class="list-group-item">1 minuscule</li>';
+            }
+            else {
+                echo ' ';
+            }
+            if (!$uppercase) {
+                 echo '<li class="list-group-item">1 majuscule</li>';
+            }
+            else {
+                echo ' ';
+            }
+            
+           if (!$specialChars) {
+            echo '<li class="list-group-item">1 caractère spécial</li>';
+            }
+            else {
+                echo ' ';
+            }
+            if (strlen($password) < 12) {
+                echo '<li class="list-group-item">12 caractères</li>';
+            }
+            else {
+                echo ' ';
+            }
+
+            
+            echo'    
                 </ul>
                 </div>
             </div>
