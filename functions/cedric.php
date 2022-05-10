@@ -24,15 +24,15 @@ function checkPassword($password) {
             
             else{
                 echo '<div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>';
+                echo '<br>';
                 echo '<button type="button" class="btn btn-success">OK</button>';
             }
-            
+            echo '<br>';
 
             echo' <div class="row" >
-                <div class="col-4"  >
-                <ul class="list-group ">';
+                <ul class="list-group col-3 mx-auto">';
             echo '<li class="list-group-item active" aria-current="true">Le mot de passe doit contenir au moins:</li>';
             if (!$number) {
                 echo '<li class="list-group-item">1 chiffre</li>';
@@ -69,7 +69,7 @@ function checkPassword($password) {
             
             echo'    
                 </ul>
-                </div>
+
             </div>
 
 
