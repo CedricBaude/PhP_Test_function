@@ -13,22 +13,53 @@ function checkPassword($password) {
             $uppercase = preg_match('@[A-Z]@', $password);
             $lowercase = preg_match('@[a-z]@', $password);
             $number    = preg_match('@[0-9]@', $password);
-            $specialChars = preg_match('@[^\w]@', $password);
+            $specialChars = preg_match('@[^\w]@', $password); //#\W+#
+            $carac_number = strlen($password) >= 12;
+
+            $tableau = array (
+                "majuscule" => $uppercase,
+                "minuscule" => $lowercase,
+                "nombre" => $number,
+                "special" => $specialChars,
+                "nombre_carac" => $carac_number,
+            );
+
+            $tableau_filtre = array_filter($tableau);
+            count($tableau_filtre);
             
-            if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 12) {
+            if (count($tableau_filtre) == 0){
                 echo '<div class="progress">
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>';
-                
+                       <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>';   
             }
-            
-            else{
+            if (count($tableau_filtre) == 1){
+                echo '<div class="progress">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"  role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>';   
+            }
+            if (count($tableau_filtre) == 2){
+                echo '<div class="progress">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"  role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>';   
+            }
+            if (count($tableau_filtre) == 3){
+                echo '<div class="progress">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"  role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>';   
+            }
+            if (count($tableau_filtre) == 4){
+                echo '<div class="progress">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated"  role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>';   
+            }
+            if (count($tableau_filtre) == 5){
                 echo '<div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>';
                 echo '<br>';
-                echo '<button type="button" class="btn btn-success">OK</button>';
+                echo '<button type="button" class="btn btn-success mx-auto">OK</button>';   
             }
+            
             echo '<br>';
 
             echo' <div class="row" >
