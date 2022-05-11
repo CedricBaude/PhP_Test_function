@@ -71,8 +71,6 @@ function checkPassword($password) {
                 echo '<li class="list-group-item active text-center" aria-current="true">Le mot de passe doit contenir au moins:</li>';
             }
 
-
-            
             if (!$number) {
                 echo '<li class="list-group-item">1 chiffre</li>';
             }

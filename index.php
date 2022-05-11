@@ -20,10 +20,8 @@
         
         <button type="button" class="btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Soumettre le mot de passe
-            </button>
-
-            
-
+        </button>
+        
             <?php
 
             if (isset($_GET['password'])) {
