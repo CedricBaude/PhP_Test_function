@@ -1,5 +1,6 @@
 <?php
     // ...
+    include_once ('./functions/cedric.php');
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
         <button type="button" class="btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Soumettre le mot de passe
         </button>
-        
+
             <?php
 
             if (isset($_GET['password'])) {
@@ -30,7 +31,7 @@
 
                 // I use my personal function with my namespace
                 // ...
-                include_once ('./functions/cedric.php');
+                
                 cedric\checkPassword($password);
 
             }
