@@ -12,7 +12,7 @@ function checkPassword($password) {
 
             $uppercase = preg_match('@[A-Z]@', $password);
             $lowercase = preg_match('@[a-z]@', $password);
-            $number    = preg_match('@[0-9]@', $password);
+            $number = preg_match('@[0-9]@', $password);
             $specialChars = preg_match('@[^\w]@', $password); //#\W+#
             $carac_number = strlen($password) >= 12;
 
