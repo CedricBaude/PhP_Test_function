@@ -64,7 +64,15 @@ function checkPassword($password) {
 
             echo' <div class="col-4 mx-auto" >
                 <ul class="list-group">';
-            echo '<li class="list-group-item active text-center" aria-current="true">Le mot de passe doit contenir au moins:</li>';
+            if (count($tableau_filtre) == 5){
+                echo '';   
+            }
+            else {
+                echo '<li class="list-group-item active text-center" aria-current="true">Le mot de passe doit contenir au moins:</li>';
+            }
+
+
+            
             if (!$number) {
                 echo '<li class="list-group-item">1 chiffre</li>';
             }
