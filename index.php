@@ -33,7 +33,7 @@
                 // I use my personal function with my namespace
                 // ...
                 include_once ('./functions/cedric.php');
-                checkPassword($password);
+                cedric\checkPassword($password);
 
             }
             else {

@@ -1,6 +1,6 @@
 <?php
 
-//namespace cedric;
+namespace cedric;
 
 function checkPassword($password) {
 
