@@ -105,14 +105,9 @@ function checkPassword($password) {
             
             echo'    
                 </ul>
-
             </div>
-
-
         </div>';
-
     // ...
-
 }
 
 ?>

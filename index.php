@@ -18,11 +18,32 @@
     <body>
 
         <div class="container py-3">
-        
-        <button type="button" class="btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Soumettre le mot de passe
-        </button>
+            <div class="col-3 mx-auto">
+            <button type="button" class="w-100 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Soumettez votre mot de passe
+            </button>
+            </div>
 
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form action="../index.php" method="get">
+                        <div class="form-floating">
+                        <input type="text" class="form-control" name="password" id="password" placeholder="Mot de passe">
+                        <label for="floatingPassword">Tester votre mot de passe</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        
             <?php
 
             if (isset($_GET['password'])) {
